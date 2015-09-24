@@ -1,0 +1,10 @@
+@charset "utf-8";
+
+.c-siteInner {
+    @include PCsiteWidth;
+}
+
+.c-pagetop {
+    @include PCsiteWidth;
+    text-align: right;
+}
