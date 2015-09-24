@@ -7,7 +7,7 @@
 
 <meta name="keywords" content=""> 
 <meta name="description" content=""> 
-<meta name="viewport" content="width=device-width; initial-scale=1.0;"> 
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <!-- *** webclip *** --> <!--★スマホサイト 144px-->
 <link rel="apple-touch-icon-precomposed" href="<?php bloginfo('template_url'); ?>/img/favicon/webclip.png">
