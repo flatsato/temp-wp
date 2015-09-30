@@ -1,7 +1,9 @@
 # temp-wp
 
 - カスタム投稿
-- javascript 高さ揃
+- javascript 高さ揃え、スムーズスクロール
+- font awesome読み込み
+- 設計＝SMACSS https://smacss.com/ja
 
 
 ## 追加予定の機能
