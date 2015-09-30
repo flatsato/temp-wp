@@ -1,4 +1,4 @@
-# NU temp
+# Wordpress template "NU"
 
 NU＝フランス語で裸という意味です。  
 Wordpress制作経験で使いやすいベースを随時更新しております。
