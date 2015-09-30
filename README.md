@@ -14,15 +14,15 @@ WordPress › Duplicate Post « WordPress Plugins
 https://wordpress.org/plugins/duplicate-post/  
 記事をコピーする
 
-WordPress › Category Order and Taxonomy Terms Order « WordPress Plugins
-https://wordpress.org/plugins/taxonomy-terms-order/
+WordPress › Category Order and Taxonomy Terms Order « WordPress Plugins  
+https://wordpress.org/plugins/taxonomy-terms-order/  
 カテゴリ表示並び替え
 
-Intuitive Custom Post Order
+Intuitive Custom Post Order  
 ドラッグ ドロップで記事順番の並び替え
 
-WP SiteManager
-https://ja.wordpress.org/plugins/wp-sitemanager/
+WP SiteManager  
+https://ja.wordpress.org/plugins/wp-sitemanager/  
 パンくず、サイトマップ、キーワードディスクリプション
 
 
