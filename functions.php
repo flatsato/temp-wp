@@ -1,9 +1,8 @@
 <?php
 
-//アイキャッチ画像を利用
-add_theme_support( 'post-thumbnails' );
-//アイキャッチ画像サイズを指定
-set_post_thumbnail_size(300, 220, true);
+//画像 サイズを指定
+add_image_size( 'newsdetail_img', 990, 600, true );
+add_image_size( 'newslist_img', 300, 200, true );
 
 // サイド ウィジェットエリアを定義
 register_sidebar( array(
