@@ -1,22 +1,15 @@
 <?php get_header(); ?>
-
 <div class="l-contents">
-<div class="l-mainContents">
-
-<?php while(have_posts()): the_post();?>
+<main class="l-main">
+<h1 class="title"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h1>
 <article class="entryWrap">
-
-<p class="date"><?php the_time('Y/m/d'); ?></p>
-<p class="thumb"><a href="<?php the_permalink(); ?>"><?php the_post_thumbnail(); ?></a></p>
-<h2 class="entryTitle"><?php the_title(); ?></h2>
+<time class="date"><?php the_time('Y/m/d'); ?></time>
+  <div class="category"><?php the_category(); ?></div>
+<div class="tag"><?php the_tags(); ?></div>
+<div class="thumb"><?php the_post_thumbnail('thumbnail'); ?></div>
 <p class="excerpt"><?php the_excerpt(); ?></p>
-
 </article>
-<?php endwhile; ?>
-
-</div>
-</div>
-
+</main>
 <?php get_sidebar(); ?>
-
+</div>
 <?php get_footer(); ?>

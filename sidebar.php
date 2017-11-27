@@ -1,8 +1,7 @@
-<div class="l-sidebar">
-<div class="inner">
+<aside class="l-side">
 <?php dynamic_sidebar( 'top' ) ; ?>
-</div>
-</div>
+<?php dynamic_sidebar('header'); ?>
+</aside>
 
 
 

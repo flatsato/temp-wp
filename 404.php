@@ -1,7 +1,6 @@
 <?php get_header(); ?>
-
+<main class="l-main">
 <div class="l-contents">
-<div class="l-mainContents">
 
 <article class="entryWrap">
 
@@ -13,10 +12,6 @@
 <p><a href="<?php echo home_url( '/' ); ?>">トップページへ</a>／<a a href="#" onClick="history.back(); return false;">ひとつ前のページへ戻る</a></p>
 </div>
 </article>
-
 </div>
-</div>
-
-<?php get_sidebar(); ?>
-
+</main>
 <?php get_footer(); ?>

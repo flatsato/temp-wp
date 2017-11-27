@@ -8,11 +8,18 @@ add_image_size( 'newslist_img', 300, 200, true );
 register_sidebar( array(
 	'name' => __( 'サイド ウィジェットエリア' ),
 	'id' => 'top',
-	'description' => __( 'サイドバーの一番上に表示されるウィジェットエリアです' ),
+	'description' => __( 'サイドバーに表示されるウィジェットエリアです' ),
 	'before_widget' => '<div class="wigetWrap">',
 	'after_widget' => '</div>',
 	'before_title' => '<h3 class="widgetTitle">',
 	'after_title' => '</h3>',
+) );
+
+// ヘッダー ウィジェットエリアを定義
+register_sidebar( array(
+	'name' => __( 'ヘッダー ウィジェットエリア' ),
+	'id' => 'header',
+	'description' => __( 'ヘッダーに表示されるウィジェットエリアです' ),
 ) );
  
 //ギャラリーのスタイルを削除
@@ -48,8 +55,8 @@ add_post_type_support( 'page', 'excerpt' );
 
 //カスタムメニューを使う
 register_nav_menus( array(
-    'head_navi' => 'ヘッダーナビ',
-    'foot_navi' => 'フッターナビ',
+    'navi1' => 'ヘッダーナビ',
+    'navi2' => 'フッターナビ',
 ));
 
 //カテゴリ一覧にカテゴリスラッグ入りのclassを追加する
@@ -140,32 +147,6 @@ if (!current_user_can('edit_users')) {
   add_action('admin_menu', 'remove_menus');
 }
 
-//記事投稿画面＞編集者の場合、メニューを非表示
-if (!current_user_can('edit_users')) {
-  function remove_extra_meta_boxes() {
-    remove_meta_box( 'postcustom' , 'post' , 'normal' ); /* 投稿のカスタムフィールド */
-    remove_meta_box( 'postcustom' , 'page' , 'normal' ); /* 固定ページのカスタムフィールド */
-    remove_meta_box( 'postexcerpt' , 'post' , 'normal' ); /* 投稿の抜粋 */
-    remove_meta_box( 'postexcerpt' , 'page' , 'normal' ); /* 固定ページの抜粋 */
-    remove_meta_box( 'commentsdiv' , 'post' , 'normal' ); /* 投稿のコメント */
-    remove_meta_box( 'commentsdiv' , 'page' , 'normal' ); /* 固定ページのコメント */
-    remove_meta_box( 'tagsdiv-post_tag' , 'post' , 'side' ); /* 投稿のタグ */
-    remove_meta_box( 'tagsdiv-post_tag' , 'page' , 'side' ); /* 固定ページのタグ */
-    remove_meta_box( 'trackbacksdiv' , 'post' , 'normal' ); /* 投稿のトラックバック */
-    remove_meta_box( 'trackbacksdiv' , 'page' , 'normal' ); /* 固定ページのトラックバック */
-    remove_meta_box( 'commentstatusdiv' , 'post' , 'normal' ); /* 投稿のディスカッション */
-    remove_meta_box( 'commentstatusdiv' , 'page' , 'normal' ); /* ページのディスカッション */
-    remove_meta_box( 'slugdiv','post','normal'); /* 投稿のスラッグ */
-    remove_meta_box( 'slugdiv','page','normal'); /* 固定ページのスラッグ */
-    remove_meta_box( 'authordiv','post','normal' ); /* 投稿の作成者 */
-    remove_meta_box( 'authordiv','page','normal' ); /* 固定ページの作成者 */
-    remove_meta_box( 'revisionsdiv','post','normal' ); /* 投稿のリビジョン */
-    remove_meta_box( 'revisionsdiv','page','normal' ); /* 固定ページのリビジョン */
-    remove_meta_box( 'pageparentdiv','page','side'); /* 固定ページのページ属性 */
-  }
-  add_action( 'admin_menu' , 'remove_extra_meta_boxes' );
-}
-
 // #more-$id を削除する。
 function custom_content_more_link( $output ) {
 	$output = preg_replace('/#more-[\d]+/i', '', $output );
@@ -210,37 +191,47 @@ remove_action('wp_head', 'start_post_rel_link');
 remove_action('wp_head', 'index_rel_link');
 remove_action('wp_head', 'adjacent_posts_rel_link');
 
-
 //カスタム投稿タイプの指定
 function new_post_type(){
-	//カスタム投稿タイプ1
-	register_post_type(
-		'custom1',
-		array(
-			  'label'=> 'カスタム投稿1',
-			  'public' => true,
-			  'hierarchical'=> false, 
-			  'has_archive' => true,
-			  'supports' => array(
-						 'title',
-						 'editor',
-						 'thumbnail',
-						 'excerpt'
-			  ),
-			  'menu_position' => 5
-		)
-	);
-	
-	    // カスタム投稿タイプ1タクソノミー
-    register_taxonomy(
-        'custom1cat',
-        'custom1',
-        array(
-          'label' => 'カスタム投稿1カテゴリー',
-          'public' => true,
-          'hierarchical' => true,
-        )
-    );
+//カスタム投稿タイプ1
+register_post_type(
+'custom1',
+    array(
+    'label'=> 'カスタム投稿1',
+    'public' => true,
+    'hierarchical'=> false, 
+    'has_archive' => true,
+    'supports' => array(
+    'title',
+    'editor',
+    'thumbnail',
+    'excerpt'
+    ),
+  'menu_position' => 5
+  )
+);
+
+// カスタム投稿タイプ1タクソノミー
+register_taxonomy(
+  'custom1cat',
+  'custom1',
+    array(
+    'label' => 'カスタム投稿1カテゴリー',
+    'public' => true,
+    'hierarchical' => true,
+    )
+);
+//カスタムタクソノミー、タグタイプ
+register_taxonomy(
+  'custom1tag', 
+  'custom1', 
+    array(
+
+    'label' => 'カスタム投稿1タグ',
+    'public' => true,
+    'hierarchical' => true,
+    )
+);
 		
 }
 add_action('init', 'new_post_type');
