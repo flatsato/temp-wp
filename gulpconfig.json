@@ -49,7 +49,7 @@
     "<COMMENT>": "sourcemapの設定",
     "mapFlg": true,
     "<COMMENT>": "wordpress用のdest設定",
-    "wpFlg": true
+    "wpFlg": false
   },
 
   "js_works": {
@@ -67,7 +67,7 @@
     "<COMMENT>": "sourcemapの設定",
     "mapFlg": true,
     "<COMMENT>": "wordpress用のdest設定",
-    "wpFlg": true
+    "wpFlg": false
   },
   "js_vendor": {
     "<COMMENT>": "js(プラグイン)に関するタスクを実行する対象の設定",
@@ -75,7 +75,7 @@
     "<COMMENT>": "タスク完了後destするディレクトリの設定",
     "dest": "./dist/js/vendor",
     "<COMMENT>": "dest時の圧縮設定",
-    "minFlg": true
+    "minFlg": false
   },
 
   "img": {

@@ -124,7 +124,7 @@ gulp.task('js:works', ()=> {
   // 対象ディクトリ内で変更があったファイルだけをストリーム(次の処理)に流す
   .pipe($.changed(Cfg.js_works.dest))
   // JavaScriptのLintチェック
-  .pipe($.eslint({ useEslintrc: true }))
+  .pipe($.eslint({ useEslintrc: false }))
   // formatでLint結果をconsoleに表示
   .pipe($.eslint.format())
   // Lintエラーが発生した場合タスクの停止(dest以下のストリームを流さない)
@@ -216,7 +216,6 @@ gulp.task('image', ()=> {
   ))
 });
 
-
 gulp.task('watch', ()=> {
   gulp.watch('src/template/**/*.html', ['html']);
   gulp.watch('src/template/**/*.ejs', ['ejs']);
@@ -228,7 +227,6 @@ gulp.task('watch', ()=> {
 
 gulp.task('default', ()=> {
   runSequence(
-    ['webserver', 'html', 'ejs', 'sass', 'js', 'image'],
-    'watch'
+    ['webserver', 'html', 'ejs', 'sass', 'js', 'image', 'watch'],
   );
 });
