@@ -1,4 +1,4 @@
-<?php get_template_part( head ); ?>
+<?php get_template_part( _parts/head ); ?>
 <div class="l-container">
 <header id="pagetop" class="l-header">
 <div class="l-header__inner">
