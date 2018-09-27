@@ -52,3 +52,9 @@ ul {
 .l-footer__copy {
   margin: 0;
 }
+
+#pond {
+  display: flex;
+  align-items :flex-end;
+  justify-content:space-around;
+}

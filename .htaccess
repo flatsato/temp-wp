@@ -1,0 +1,20 @@
+
+# BEGIN WordPress
+<IfModule mod_rewrite.c>
+RewriteEngine On
+RewriteBase /
+RewriteRule ^index\.php$ - [L]
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule . /index.php [L]
+</IfModule>
+
+# END WordPress
+# BEGIN-HTACCESS-200056
+# このBEGIN-ENDはヘテムルコントロールパネルから挿入されました。編集しないようにお願いします。
+AuthUserFile /home/users/0/abechan999/web/wd-flat.com/_sub/sato/.htpasswd
+AuthGroupFile /dev/null
+AuthName "sato pass"
+AuthType Basic
+require valid-user
+# END-HTACCESS-200056
