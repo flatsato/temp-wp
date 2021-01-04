@@ -1,0 +1,26 @@
+@charset "utf-8";
+
+.l-header {
+  width: 100%;
+  .l-header__inner {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    height: 70px;
+    padding: 0 40px;
+  }
+  .l-header__siteText {
+    @include fz(10);
+    @include desktop {
+      margin-left: 20px;
+      @include fz(12);
+    }
+  }
+  .l-header__siteLogo {
+    margin-bottom: 6px;
+    @include ov;
+    @include desktop {
+      margin-bottom: 12px;
+    }
+  }
+}

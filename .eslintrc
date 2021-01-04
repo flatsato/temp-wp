@@ -1,0 +1,25 @@
+{
+  "ignorePatterns": [
+    "**/*.vue?rollup-plugin-vue=*"
+  ],
+  "extends": [
+    "airbnb-base",
+    "plugin:vue/recommended",
+    "plugin:prettier/recommended",
+    "prettier/vue"
+  ],
+  "plugins": [
+    "prettier"
+  ],
+  "env": {
+    "browser": true,
+    "es6": true,
+    "jquery": true
+  },
+  "parserOptions": {
+    "ecmaVersion": 2020
+  },
+  "rules": {
+    "prettier/prettier": "error"
+  }
+}

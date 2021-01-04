@@ -1,0 +1,21 @@
+@charset "utf-8";
+
+.l-sub {
+  width: 280px;
+  padding: 20px;
+  margin-left: 20px;
+  background: $color_lightgray;
+  .l-sub__title {
+    @include fz(16);
+  }
+  .l-sub__list {
+    margin-top: 5px;
+    margin-left: 10px;
+  }
+  .l-sub__item {
+    // style
+  }
+  .l-sub__section {
+    // style
+  }
+}

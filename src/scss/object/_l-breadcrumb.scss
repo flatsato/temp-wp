@@ -1,0 +1,21 @@
+@charset "utf-8";
+
+.l-breadcrumb {
+  width: 100%;
+  margin: 20px auto;
+  .l-breadcrumb__list {
+    display: flex;
+  }
+  .l-breadcrumb__item {
+    &:nth-child(n + 2) {
+      &::before {
+        color: $color_gray;
+        content: "＞";
+      }
+    }
+    a {
+      text-decoration: none;
+      @include ov;
+    }
+  }
+}

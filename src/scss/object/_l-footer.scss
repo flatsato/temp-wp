@@ -1,0 +1,28 @@
+@charset "utf-8";
+
+.l-footer {
+  position: relative;
+  padding: 50px 0;
+  margin-top: 40px;
+  background: $color_lightgray;
+  .l-footer__copy {
+    @include fz(11);
+  }
+  .l-footer__inner {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px auto;
+  }
+  .l-footer__nav {
+    // style
+  }
+  .l-footer__navList {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .l-footer__navItem {
+    // style
+  }
+}

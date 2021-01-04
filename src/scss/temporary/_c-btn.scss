@@ -1,0 +1,30 @@
+@charset "utf-8";
+
+//囲み 右寄せ 中央寄せ 左寄せ
+.c-btnWrap {
+  display: flex;
+  &._left {
+    justify-content: flex-start;
+  }
+  &._center {
+    justify-content: center;
+  }
+  &._right {
+    justify-content: flex-end;
+  }
+}
+
+.c-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px 20px;
+  text-decoration: none;
+  cursor: pointer;
+  background: #fff;
+  border: 1px solid #999;
+  @include fz(13);
+  & + & {
+    margin-left: 10px;
+  }
+}

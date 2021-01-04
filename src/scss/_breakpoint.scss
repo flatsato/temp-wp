@@ -1,0 +1,56 @@
+@charset "utf-8";
+
+//@include mobile375{}
+@mixin mobile375 {
+  @media (min-width: $mobile375) {
+    @content;
+  }
+}
+//@include mobile{}
+@mixin mobile {
+  @media (max-width: $tablet - 1px) {
+    @content;
+  }
+}
+//@include tablet{}
+@mixin tablet {
+  @media (min-width: $tablet) {
+    @content;
+  }
+}
+//@include touch{}
+@mixin touch {
+  @media (max-width: $desktop - 1px) {
+    @content;
+  }
+}
+//@include desktop{}
+@mixin desktop {
+  @media (min-width: $desktop) {
+    @content;
+  }
+}
+//@include wide{}
+@mixin wide {
+  @media (min-width: $wide) {
+    @content;
+  }
+}
+//@include full{}
+@mixin full {
+  @media (min-width: $wide) {
+    @content;
+  }
+}
+//@include ordinalWidth{}
+@mixin ordinalWidth($ordinalWidth) {
+  @media (min-width: $ordinalWidth + px) {
+    @content;
+  }
+}
+//@include print{}
+@mixin print {
+  @media print {
+    @content;
+  }
+}

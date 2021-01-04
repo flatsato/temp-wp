@@ -1,0 +1,44 @@
+@charset "utf-8";
+
+.p-kv {
+  position: relative;
+  height: 240px;
+  @include desktop {
+    height: 420px;
+  }
+  .p-kv__inner {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    width: 100%;
+    transform: translateY(-50%);
+    z-index: 10;
+  }
+  .p-kv__title {
+    line-height: 1.4;
+    color: $color_white;
+    text-align: center;
+    .jp {
+      @include fz(24);
+    }
+    .en {
+      margin-top: 10px;
+      @include fz(16);
+    }
+    span {
+      display: block;
+    }
+  }
+  .p-kv__bg {
+    width: 100%;
+    height: inherit;
+    @include desktop {
+      height: 420px;
+    }
+    img {
+      display: block;
+      width: 100%;
+      height: 100%;
+    }
+  }
+}

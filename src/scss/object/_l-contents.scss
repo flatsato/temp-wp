@@ -1,0 +1,9 @@
+@charset "utf-8";
+
+.l-contents {
+  display: flex;
+  width: 100%;
+  .p-kv + & {
+    margin-top: 40px;
+  }
+}

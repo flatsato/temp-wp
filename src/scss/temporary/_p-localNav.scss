@@ -1,0 +1,12 @@
+@charset "utf-8";
+
+.p-localNav {
+  .p-localNav__list {
+    display: flex;
+  }
+  .p-localNav__item {
+    &:nth-child(n + 2) {
+      margin-left: 20px;
+    }
+  }
+}

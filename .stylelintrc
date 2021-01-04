@@ -1,0 +1,48 @@
+{
+  "extends": [
+    "stylelint-config-standard",
+    "stylelint-prettier/recommended",
+  ],
+  "plugins": [
+    "stylelint-scss",
+    "stylelint-prettier",
+  ],
+  "rules": {
+    "at-rule-empty-line-before": ["always", {
+      except: [
+        "after-same-name",
+        "inside-block",
+      ],
+      ignore: ["after-comment"],
+    }],
+    "at-rule-no-unknown": [true, {
+      "ignoreAtRules": [
+        "at-root",
+        "debug",
+        "each",
+        "else",
+        "error",
+        "extend",
+        "for",
+        "forward",
+        "function",
+        "if",
+        "include",
+        "mixin",
+        "return",
+        "use",
+        "warn",
+        "while",
+      ]
+    }],
+    "declaration-empty-line-before": "never",
+    "no-descending-specificity": null,
+    "rule-empty-line-before": ["always-multi-line", {
+      except: ["inside-block"],
+      ignore: ["after-comment"],
+    }],
+    "scss/dollar-variable-colon-space-after": "always-single-line",
+    "scss/operator-no-unspaced": true,
+    "prettier/prettier": true,
+  },
+}

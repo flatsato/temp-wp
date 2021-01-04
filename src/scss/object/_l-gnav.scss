@@ -1,0 +1,13 @@
+@charset "utf-8";
+
+.l-gnav {
+  padding: 20px 0;
+  background: $color_lightgray;
+  text-align: center;
+  .l-gnav__list {
+  }
+  .l-gnav__item {
+    display: inline-block;
+    @include fz(14);
+  }
+}
